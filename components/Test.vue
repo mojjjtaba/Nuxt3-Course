@@ -1,15 +1,37 @@
 <template>
-    <div>
-        <h1>Test Component</h1>
+    <div class="container">
+        <h1>Test Component. count is {{count}}</h1>
+        <button @click="increment">Increment</button>
     </div>
 </template>
 
-<script setup>
-// import {ref, computed} from "#imports"
-// const data = await $fetch("https://fakestoreapi.com/products")
-// const {data} = await useFetch("https://fakestoreapi.com/products")
-
-const count = ref(1)
-const double = computed(() => count.value * 2)
-console.log(count.value, double.value)
+<script lang="ts" setup>
+const count: Ref<number> = ref(1)
+const increment = () => count.value++
 </script>
+
+<!-- <script>
+export default {
+    data() {
+        return {
+            count: 1
+        }
+    },
+    methods: {
+        increment() {
+            this.count++;
+        }
+    }
+}
+</script> -->
+
+<style>
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    color: red;
+}
+</style>
