@@ -1,10 +1,11 @@
 <template>
   <div>
-    <!-- <NuxtWelcome /> -->
-    <Test />
+    <!-- <Test /> -->
   </div>
 </template>
 
 <script setup>
-import Test from './components/Test.vue';
+// import Test from './components/Test.vue';
+
+const data = 'test'
 </script>
