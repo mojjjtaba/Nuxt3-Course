@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Portfolio page</h1>
+        <h1>{{ $route.params }}</h1>
     </div>
 </template>
