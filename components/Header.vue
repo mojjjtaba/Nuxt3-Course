@@ -1,9 +1,11 @@
 <template>
     <header>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
+            <li><NuxtLink href="/">Home</NuxtLink></li>
+            <li><NuxtLink to="/about" activeClass="custom-active" prefetched-class="prefetched">About</NuxtLink></li>
+            <li><NuxtLink :to="{name: 'products-productId', params: {productId: 78}}">Product detail</NuxtLink></li>
+            <li><nuxt-link to="/favicon.ico" external>Download</nuxt-link></li>
+            <li><nuxt-link to="https://nuxt.com" target="_blank" rel="noopener">Nuxt website</nuxt-link></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
