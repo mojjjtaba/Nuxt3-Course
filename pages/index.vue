@@ -6,34 +6,12 @@
 </template>
 
 <script setup>
+const router = useRouter()
+console.log(router)
 async function goTo() {
-    // await navigateTo('/about')
-    // await navigateTo('/about', {
-    //     redirectCode: 307
-    // })
-    // await navigateTo({path: '/about'})
-    // await navigateTo({
-    //     name: "about",
-    //     query: {
-    //         color: "red"
-    //     }
-    // })
-    // await navigateTo('https://nuxt.com', {external: true})
-    // await navigateTo('https://nuxt.com', {
-    //     open: {
-    //         target: "_blank",
-    //         windowFeatures: {
-    //             width: 600,
-    //             height: 600,
-    //             popup: true
-    //         }
-    //     }
-    // })
-
-    await navigateTo('/about', {
-        replace: true
-    })
+//    console.log(router.currentRoute.value)
+    // router.back()
+    // console.log(router.getRoutes())
+    console.log(router.hasRoute('portfolio'))
 }
-
-console.log(window.history)
 </script>
