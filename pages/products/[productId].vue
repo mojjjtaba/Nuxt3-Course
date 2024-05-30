@@ -6,10 +6,20 @@
 </template>
 
 <script setup>
-const route = useRoute()
-console.log(route)
+// const route = useRoute()
+// console.log(route)
 
 definePageMeta({
-    description: "This is a description"
+    validate: (route) => {
+        const productId = route.params.productId;
+        console.log(typeof productId)
+        // if(typeof productId === 'string' && /^\d+$/.test(productId)) {
+        //     return true
+        // } else {
+        //     return false
+        // }
+    
+        return typeof productId === 'string' && /^\d+$/.test(productId)
+    }
 })
 </script>
