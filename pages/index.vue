@@ -1,9 +1,14 @@
 <template>
     <div>
         <h1>Landing page</h1>
-        <UserAvatar />
-        <Mars />
-        <Header />
+        <ClientOnly>
+            <Comments2 />
+            <template #fallback>
+                <article>
+                    <h1>Loading...</h1>
+                </article>
+            </template>
+        </ClientOnly>
     </div>
 </template>
 
