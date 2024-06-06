@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Footer</h1>
+        <h1>Footer Component 77</h1>
     </div>
 </template>
