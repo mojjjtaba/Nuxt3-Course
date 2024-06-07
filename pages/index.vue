@@ -1,14 +1,15 @@
 <template>
     <div>
         <h1>Landing page</h1>
-        <ClientOnly>
-            <Comments2 />
+        <DevOnly>
+            <h1>Development code</h1>
+
             <template #fallback>
-                <article>
-                    <h1>Loading...</h1>
-                </article>
+                <h1>
+                    Placeholder
+                </h1>
             </template>
-        </ClientOnly>
+        </DevOnly>
     </div>
 </template>
 
