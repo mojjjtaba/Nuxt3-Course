@@ -11,6 +11,11 @@
     </header>
 </template>
 
+<script setup>
+const uniqueId = useId()
+console.log(uniqueId)
+</script>
+
 <style lang="scss">
 ul {
     list-style: none;
