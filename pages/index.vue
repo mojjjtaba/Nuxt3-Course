@@ -5,5 +5,7 @@
 </template>
 
 <script setup>
-
+definePageMeta({
+    layout: 'blog-custom'
+})
 </script>
