@@ -12,7 +12,7 @@
 definePageMeta({
     validate: (route) => {
         const productId = route.params.productId;
-        console.log(typeof productId)
+        // console.log(typeof productId)
         // if(typeof productId === 'string' && /^\d+$/.test(productId)) {
         //     return true
         // } else {
@@ -21,6 +21,11 @@ definePageMeta({
     
         return typeof productId === 'string' && /^\d+$/.test(productId)
     },
-    middleware: 'product'
+    middleware: [
+        function(to, from) {
+            console.log("Anonymous Route Middleware")
+        },
+        'product'
+    ]
 })
 </script>
