@@ -9,5 +9,5 @@
 <script setup>
 const layout = ref()
 
-onMounted(() => layout.value.layoutRef.greeting())
+// onMounted(() => layout.value.layoutRef.greeting())
 </script>

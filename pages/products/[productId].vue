@@ -20,6 +20,7 @@ definePageMeta({
         // }
     
         return typeof productId === 'string' && /^\d+$/.test(productId)
-    }
+    },
+    middleware: 'product'
 })
 </script>
