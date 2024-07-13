@@ -22,10 +22,10 @@ definePageMeta({
         return typeof productId === 'string' && /^\d+$/.test(productId)
     },
     middleware: [
+        'product',
         function(to, from) {
             console.log("Anonymous Route Middleware")
         },
-        'product'
     ]
 })
 </script>
