@@ -1,6 +1,6 @@
 <template>
     <div>
-        <AdminHeader />
+        <h1>blog-custom layout</h1>
         <slot />
     </div>
 </template>
