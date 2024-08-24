@@ -28,7 +28,7 @@ ul {
     padding: 0;
     display: flex;
     width: 100%;
-    background: #070722;
+    background: $secondary;
     padding: 12px;
     box-sizing: border-box;
 
