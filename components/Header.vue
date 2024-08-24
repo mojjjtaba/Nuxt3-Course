@@ -11,7 +11,17 @@
     </header>
 </template>
 
+<script setup>
+// Static import
+// import '~/assets/css/main.css'
+
+// Dynamic import
+// import('~/assets/css/main.css')
+</script>
+
 <style lang="scss" scoped>
+//@import url('~/assets/css/main.css');
+
 ul {
     list-style: none;
     margin: 0;
