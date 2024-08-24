@@ -3,7 +3,7 @@
         <Header />
         <slot />
         <!-- <pre>{{$attrs.price}}</pre> -->
-         {{ attrs.title }}
+         <!-- {{ attrs.title }} -->
     </div>
 </template>
 

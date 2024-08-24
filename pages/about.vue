@@ -1,7 +1,8 @@
 <template>
     <div>
         <h1>About page</h1>
-        <button @click="changeLayout">Change Layout</button>
+        <!-- <button @click="changeLayout">Change Layout</button> -->
+        <Single />
     </div>
 </template>
 
