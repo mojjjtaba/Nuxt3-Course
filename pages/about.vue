@@ -10,4 +10,8 @@
 function changeLayout() {
     setPageLayout('admin')
 }
+
+useHead({
+    title: "About"
+})
 </script>

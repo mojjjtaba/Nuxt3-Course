@@ -32,7 +32,7 @@ useHeadSafe({
     test: "test",
     id: "htmlId"
   },
-  title: "My Nuxt App",
+  title: "Landing",
   meta: [
     { name: "author", content: "Mojtaba" },
     { name: "keywords", content: "Javascript, Vue.js, Nuxt.js" },
