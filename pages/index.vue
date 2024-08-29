@@ -16,12 +16,21 @@ useHead({
       href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
     },
   ],
+
+})
+
+useHeadSafe({
+  script: [
+    {id: "xss-script", innerHTML: 'alert("XSS Attack")'}
+  ],
   bodyAttrs: {
     id: "BodyTag",
   },
   htmlAttrs: {
     dir: "ltr",
     lang: "en",
+    test: "test",
+    id: "htmlId"
   },
   title: "My Nuxt App",
   meta: [
