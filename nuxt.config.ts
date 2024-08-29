@@ -7,16 +7,22 @@ export default defineNuxtConfig({
     '~/assets/scss/main.scss'
    ],
 
-  // app: {
-  //   head: {
-  //     link: [
-  //       {
-  //         rel: 'stylesheet',
-  //         href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
-  //       }
-  //     ]
-  //   }
-  // }
+  app: {
+    head: {
+      bodyAttrs: {
+        id: "BodyTag"
+      },
+      htmlAttrs: {
+        dir: 'ltr',
+        lang: 'en'
+      },
+      title: "My Nuxt App",
+      meta: [
+        {name: 'author', content: 'Mojtaba'},
+        {name: 'keywords', content: 'Javascript, Vue.js, Nuxt.js'}
+      ]
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {
