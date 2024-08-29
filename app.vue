@@ -10,6 +10,13 @@
 const layout = ref()
 
 // onMounted(() => layout.value.layoutRef.greeting())
+
+useHead({
+  // titleTemplate: '%s - My Nuxt App',
+  titleTemplate: (title) => {
+    return title ? `${title} - My Nuxt App` : 'My Nuxt App'
+  }
+})
 </script>
 
 <style lang="scss">
