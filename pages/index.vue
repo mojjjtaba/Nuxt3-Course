@@ -2,6 +2,9 @@
   <div class="pl-5">
     <h1 class="animate__animated animate__slideInLeft">Landing page</h1>
   </div>
+  <button @click="desc = 'Description changed'">
+    Change Description
+  </button>
 </template>
 
 <script setup>
@@ -38,10 +41,23 @@ useHeadSafe({
     id: "htmlId"
   },
   title: "Landing",
-  meta: [
-    { name: "author", content: "Mojtaba" },
-    { name: "keywords", content: "Javascript, Vue.js, Nuxt.js" },
-  ],
+  // meta: [
+  //   { name: "author", content: "Mojtaba" },
+  //   { name: "keywords", content: "Javascript, Vue.js, Nuxt.js" },
+  // ],
   
 });
+
+const desc = ref('My description')
+
+useSeoMeta({
+  author: "Ehsan",
+  ogTitle: "Nuxt App",
+  articleAuthor: "Ehsan",
+  description: () => `description: ${desc.value}`
+})
+
+useServerSeoMeta({
+  robots: "index, follow"
+})
 </script>
