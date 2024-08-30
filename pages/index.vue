@@ -2,62 +2,14 @@
   <div class="pl-5">
     <h1 class="animate__animated animate__slideInLeft">Landing page</h1>
   </div>
-  <button @click="desc = 'Description changed'">
-    Change Description
-  </button>
+  <Head>
+    <Title>{{title}}</Title>
+    <Meta name="description" :content="`${title} ++`" />
+    <Style type="text/css" children="body {background: green !important;}"></Style>
+    
+  </Head>
 </template>
 
 <script setup>
-// definePageMeta({
-//     layout: false
-// })
-
-useHead({
-  link: [
-    {
-      rel: "stylesheet",
-      href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
-    },
-  ],
-  script: [
-    {
-      src: "https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.1.0/shuffle.min.js",
-      tagPosition: 'bodyClose'
-    }
-  ]
-})
-
-useHeadSafe({
-  script: [
-    {id: "xss-script", innerHTML: 'alert("XSS Attack")'}
-  ],
-  bodyAttrs: {
-    id: "BodyTag",
-  },
-  htmlAttrs: {
-    dir: "ltr",
-    lang: "en",
-    test: "test",
-    id: "htmlId"
-  },
-  title: "Landing",
-  // meta: [
-  //   { name: "author", content: "Mojtaba" },
-  //   { name: "keywords", content: "Javascript, Vue.js, Nuxt.js" },
-  // ],
-  
-});
-
-const desc = ref('My description')
-
-useSeoMeta({
-  author: "Ehsan",
-  ogTitle: "Nuxt App",
-  articleAuthor: "Ehsan",
-  description: () => `description: ${desc.value}`
-})
-
-useServerSeoMeta({
-  robots: "index, follow"
-})
+const title = "Landing"
 </script>
