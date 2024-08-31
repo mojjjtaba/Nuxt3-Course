@@ -14,12 +14,8 @@ useHead({
 })
 
 definePageMeta({
-    layout: "admin",
-    pageTransition: {
-        name: "scale"
-    },
-    layoutTransition: {
-        name: "rotate", mode: "out-in"
-    }
+    // layout: "admin",
+    pageTransition: false,
+    // layoutTransition: false
 })
 </script>
