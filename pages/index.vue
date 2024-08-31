@@ -16,8 +16,8 @@
 const title = "Landing"
 
 definePageMeta({
-  // layoutTransition: {
-  //       name: "rotate"
-  //   }
+  layoutTransition: {
+        name: "rotate"
+    }
 })
 </script>

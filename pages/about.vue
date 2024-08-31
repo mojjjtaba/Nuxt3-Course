@@ -18,8 +18,8 @@ definePageMeta({
     pageTransition: {
         name: "scale"
     },
-    // layoutTransition: {
-    //     name: "rotate"
-    // }
+    layoutTransition: {
+        name: "rotate", mode: "out-in"
+    }
 })
 </script>
