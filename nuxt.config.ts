@@ -8,20 +8,9 @@ export default defineNuxtConfig({
    ],
 
   app: {
-    // head: {
-    //   bodyAttrs: {
-    //     id: "BodyTag"
-    //   },
-    //   htmlAttrs: {
-    //     dir: 'ltr',
-    //     lang: 'en'
-    //   },
-    //   title: "My Nuxt App",
-    //   meta: [
-    //     {name: 'author', content: 'Mojtaba'},
-    //     {name: 'keywords', content: 'Javascript, Vue.js, Nuxt.js'}
-    //   ]
-    // }
+    pageTransition: {
+      name: "page", mode: "out-in"
+    }
   },
   vite: {
     css: {

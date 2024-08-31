@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="pl-5">
         <h1>Dynamic route</h1>
-        <h2>Params -> {{$route.params.productId}}</h2>
+        <h2 class="text-white">Params -> {{$route.params.productId}}</h2>
     </div>
 </template>
 
