@@ -14,4 +14,10 @@
 
 <script setup>
 const title = "Landing"
+
+definePageMeta({
+  // layoutTransition: {
+  //       name: "rotate"
+  //   }
+})
 </script>

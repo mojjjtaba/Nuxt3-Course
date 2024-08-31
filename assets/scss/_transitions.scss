@@ -16,3 +16,25 @@
   opacity: 0;
   transform: scaleY(0.1) translateY(100px);
 }
+
+
+.layout-enter-active,
+.layout-leave-active,
+.rotate-enter-active,
+.rotate-leave-active {
+  transition: 0.4s all;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  transform: skewX(40deg);
+}
+
+
+.rotate-enter-from,
+.rotate-leave-to {
+  opacity: 0;
+  transform: rotateY(100deg);
+}
+
