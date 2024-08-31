@@ -1,0 +1,18 @@
+.page-enter-active,
+.page-leave-active,
+.scale-enter-active,
+.scale-leave-active {
+  transition: 0.5s all;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scaleY(0.1) translateY(100px);
+}

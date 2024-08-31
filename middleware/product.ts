@@ -11,5 +11,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
     // }
 
     // return false;
-    console.log("Product Named Middleware")
+    // console.log("Product Named Middleware")
 })

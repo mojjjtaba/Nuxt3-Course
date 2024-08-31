@@ -1,8 +1,6 @@
 <template>
-    <div>
+    <div class="pl-5">
         <h1>About page</h1>
-        <!-- <button @click="changeLayout">Change Layout</button> -->
-        <Single />
     </div>
 </template>
 
@@ -13,5 +11,11 @@ function changeLayout() {
 
 useHead({
     title: "About"
+})
+
+definePageMeta({
+    pageTransition: {
+        name: "scale"
+    }
 })
 </script>
