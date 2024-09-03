@@ -5,12 +5,13 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
     '~/assets/scss/main.scss'
-   ],
+  ],
 
   app: {
     pageTransition: false,
     layoutTransition: false
   },
+  
   vite: {
     css: {
       preprocessorOptions: {
