@@ -19,5 +19,9 @@ definePageMeta({
   // layoutTransition: {
   //       name: "rotate", mode: "out-in"
   //   }
+  pageTransition: {
+    name: "page",
+    mode: "out-in"
+  }
 })
 </script>

@@ -1,7 +1,10 @@
 <template>
   <div>
     <NuxtLayout title="test" price="3000" ref="layout">
-      <NuxtPage />
+      <NuxtPage :transition="{
+        name: 'scale',
+        mode: 'out-in'
+      }" />
       <div class="text-2xl mt-2 text-center">
         <NuxtLink :to="prev">⬅️</NuxtLink>
         <NuxtLink :to="next">➡️</NuxtLink>
