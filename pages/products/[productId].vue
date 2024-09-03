@@ -1,31 +1,51 @@
 <template>
-    <div class="pl-5">
-        <h1>Dynamic route</h1>
-        <h2 class="text-white">Params -> {{$route.params.productId}}</h2>
-    </div>
+  <div class="mt-6 text-center">
+    <h2 class="text-white text-6xl">{{ $route.params.productId }}</h2>
+  
+  </div>
 </template>
 
 <script setup>
-// const route = useRoute()
-// console.log(route)
-
 definePageMeta({
-    validate: (route) => {
-        const productId = route.params.productId;
-        // console.log(typeof productId)
-        // if(typeof productId === 'string' && /^\d+$/.test(productId)) {
-        //     return true
-        // } else {
-        //     return false
-        // }
-    
-        return typeof productId === 'string' && /^\d+$/.test(productId)
-    },
-    middleware: [
-        'product',
-        function(to, from) {
-            console.log("Anonymous Route Middleware")
-        },
-    ]
+  pageTransition: {
+    name: 'slide-left',
+    mode: 'out-in'
+  },
+  middleware(to, from) {
+    if(to.meta.pageTransition && typeof to.meta.pageTransition !== 'boolean') {
+      to.meta.pageTransition.name = +to.params.productId > +from.params.productId ? 'slide-left' : 'slide-right'
+    }
+  }
 })
+
+
 </script>
+
+<style>
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+</style>
